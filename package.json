@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/chafnan/karma-ng-classify-preprocessor/issues"
   },
-  "homepage": "https://github.com/chafnan/karma-ng-classify-preprocessor"
+  "homepage": "https://github.com/chafnan/karma-ng-classify-preprocessor",
+  "dependencies": {
+    "ng-classify": "^4.1.1"
+  }
 }
