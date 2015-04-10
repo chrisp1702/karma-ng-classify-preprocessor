@@ -8,7 +8,7 @@ createNgClassifyPreprocessor = (args, config = {}, logger, helper) ->
   options = helper.merge defaultOptions, args.options or {}, config.options or {}
 
   transformPath = args.transformPath or config.transformPath or (filepath) ->
-      file.path.replace(/\.coffee$/, '.js')
+    filepath.replace(/\.coffee$/, '.js')
 
   (content, file, done) ->
 
@@ -18,7 +18,7 @@ createNgClassifyPreprocessor = (args, config = {}, logger, helper) ->
     opts = helper._.clone options
 
     try
-      result = ngClassify content
+      result = ngClassify content, options
     catch e
       log.error "${e.message}\n  at #{file.originalPath}:#{e.location.first_line}"
       return done e, null

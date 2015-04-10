@@ -21,6 +21,8 @@ module.exports = function(config) {
     ngClassifyPreprocessor: {
       // options passed to ng-classify
       options: {
+	// any options supported by ng-classify
+	// https://github.com/CaryLandholt/ng-classify#api
         sourceMap: false
       },
       transformPath: function(path) {

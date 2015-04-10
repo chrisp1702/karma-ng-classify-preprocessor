@@ -13,7 +13,7 @@ createNgClassifyPreprocessor = function(args, config, logger, helper) {
   defaultOptions = {};
   options = helper.merge(defaultOptions, args.options || {}, config.options || {});
   transformPath = args.transformPath || config.transformPath || function(filepath) {
-    return file.path.replace(/\.coffee$/, '.js');
+    return filepath.replace(/\.coffee$/, '.js');
   };
   return function(content, file, done) {
     var datauri, e, map, opts, result;
@@ -21,7 +21,7 @@ createNgClassifyPreprocessor = function(args, config, logger, helper) {
     file.path = transformPath(file.originalPath);
     opts = helper._.clone(options);
     try {
-      result = ngClassify(content);
+      result = ngClassify(content, options);
     } catch (_error) {
       e = _error;
       log.error("${e.message}\n  at " + file.originalPath + ":" + e.location.first_line);
