@@ -1,0 +1,10 @@
+.*
+
+# source
+src/
+
+# tests
+test/
+
+# build
+gulpfile.coffee
