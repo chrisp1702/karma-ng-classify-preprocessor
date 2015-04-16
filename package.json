@@ -1,6 +1,6 @@
 {
   "name": "karma-ng-classify-preprocessor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Karma preprocessor for ng-classify",
   "main": "dist/index.js",
   "devDependencies": {
