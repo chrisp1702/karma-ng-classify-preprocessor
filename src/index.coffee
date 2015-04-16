@@ -10,12 +10,16 @@ createNgClassifyPreprocessor = (args, config = {}, logger, helper) ->
   transformPath = args.transformPath or config.transformPath or (filepath) ->
     filepath.replace(/\.coffee$/, '.js')
 
+  transformAppName = args.transformAppName or config.transformAppName
+
   (content, file, done) ->
 
     log.debug "Processing \"#{file.originalPath}\""
     file.path = transformPath file.originalPath
 
     opts = helper._.clone options
+
+    options.appName = transformAppName(file.path) if transformAppName
 
     try
       result = ngClassify content, options

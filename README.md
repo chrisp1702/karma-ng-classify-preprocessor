@@ -26,7 +26,12 @@ module.exports = function(config) {
         sourceMap: false
       },
       transformPath: function(path) {
-        return path.replace(/\.coffee$/, '.js')
+        return path.replace(/\.coffee$/, '.js');
+      },
+      transformAppName: function(path) {
+      	// function to change app name determined by path
+        // this function will overwrite the `appName` option
+      	return 'app';
       }
     }
   });
