@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/chafnan/karma-ng-classify-preprocessor",
   "dependencies": {
-    "ng-classify": "^4.1.1",
+    "ng-classify": "^4.1.1",    
     "lodash": "4.17.4"
   }
 }
