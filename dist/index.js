@@ -4,7 +4,7 @@ ngClassify = require('ng-classify');
 
 path = require('path');
 
-assign = require('object-assign');
+_assign = require('object-assign');
 
 
 createNgClassifyPreprocessor = function(args, config, logger, helper) {
@@ -23,7 +23,7 @@ createNgClassifyPreprocessor = function(args, config, logger, helper) {
     var datauri, e, map, opts, result;
     log.debug("Processing \"" + file.originalPath + "\"");
     file.path = transformPath(file.originalPath);
-    opts = assign({}, options)
+    opts = _assign({}, options)
     if (transformAppName) {
       options.appName = transformAppName(file.path);
     }
