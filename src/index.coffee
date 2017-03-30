@@ -1,5 +1,6 @@
 ngClassify = require 'ng-classify'
 path = require 'path'
+assign = require 'object-assign'
 
 createNgClassifyPreprocessor = (args, config = {}, logger, helper) ->
 
@@ -17,7 +18,7 @@ createNgClassifyPreprocessor = (args, config = {}, logger, helper) ->
     log.debug "Processing \"#{file.originalPath}\""
     file.path = transformPath file.originalPath
 
-    opts = helper._.clone options
+    opts = assign({}, options)
 
     options.appName = transformAppName(file.path) if transformAppName
 

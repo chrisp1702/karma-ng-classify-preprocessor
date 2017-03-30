@@ -8,8 +8,8 @@
     "gulp": "^3.8.11",
     "gulp-bump": "^0.3.0",
     "gulp-coffee": "^2.3.1",
-    "gulp-git": "^1.1.0",
-    "lodash": "^4.17.4"
+    "gulp-git": "^1.1.0"
+
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/chrisp1702/karma-ng-classify-preprocessor",
   "dependencies": {
-    "ng-classify": "^4.1.1"
+    "ng-classify": "^4.1.1",
+    "object-assign": "^4.1.0"
   }
 }
